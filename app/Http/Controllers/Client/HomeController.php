@@ -37,13 +37,13 @@ class HomeController extends Controller
         $slider              = Post::where('hot',1)->first();
         $about_us            = Post::where('slugs','about-us')->first();
         // dd($about_us);
-//        $dogs_in_order       = DetailOrder::where('id_dog','<>','')->get();
-//        // dd($dogs_in_order[1]->id_dog);
-//        foreach ($dogs_in_order as $value) {
-//            $dog_id[]        = $value->id_dog;
-//        }
+        $dogs_in_order       = DetailOrder::where('id_dog','<>','')->get();
+         dd($dogs_in_order[1]->id_dog);
+        foreach ($dogs_in_order as $value) {
+            $dog_id[]        = $value->id_dog;
+        }
         
-//        $best_dogs           = Dog::whereIn('id',$dog_id)->get();
+        $best_dogs           = Dog::whereIn('id',$dog_id)->get();
 
         $sale_dogs           = Dog::where('sale','<>',0)->get();
         $new_dogs            = $this->dog->new_dog()->get();
