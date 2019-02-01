@@ -20,10 +20,10 @@ class CreateOrdersTable extends Migration
             $table->string('description')->nullable();
             $table->datetime('date');
             $table->bigInteger('total');
+            $table->string('slugs')->nullable();
             $table->integer('status')->nullable();
             $table->bigInteger('shipping');
             $table->string('name');
-            $table->string('slugs')->nullable();
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
