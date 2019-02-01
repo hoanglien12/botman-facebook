@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPriceToDetailOrdersTable extends Migration
+class AddForiegnKeyToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddPriceToDetailOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::table('detail_orders', function (Blueprint $table) {
-            $table->bigInteger('price');
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreign('id_role')->references('id')->on('roles');
         });
     }
 
@@ -25,8 +25,8 @@ class AddPriceToDetailOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::table('detail_orders', function (Blueprint $table) {
-            $table->dropColumn('price');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign('id_role');
         });
     }
 }
