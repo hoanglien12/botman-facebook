@@ -49,7 +49,6 @@ class HomeController extends Controller
 //        $new_dogs            = $this->dog->new_dog()->get();
 
         // dd($new_dogs);
-        $dogCategories = DogCategory::all();
     	return view('client.layouts.home',compact(
             'dogCategories','productCategories','dogs','blogs','slider','about_us',
             'site_phone','site_address','sale_dogs'
