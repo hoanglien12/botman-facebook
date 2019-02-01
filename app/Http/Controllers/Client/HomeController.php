@@ -52,7 +52,7 @@ class HomeController extends Controller
         $dogCategories = DogCategory::all();
     	return view('client.layouts.home',compact(
             'dogCategories','productCategories','dogs','blogs','slider','about_us',
-            'site_phone','site_address','sale_dogs','new_dogs','best_dogs'
+            'site_phone','site_address','sale_dogs'
         ));
     }
 
