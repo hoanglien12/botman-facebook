@@ -13,7 +13,7 @@ class AddForeignKeyRoleToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('users', function ($table) {
             $table->foreign('id_role')->references('id')->on('roles');
         });
     }
