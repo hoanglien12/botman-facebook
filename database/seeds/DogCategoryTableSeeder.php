@@ -12,8 +12,8 @@ class DogCategoryTableSeeder extends Seeder
     public function run()
     {
         DB::table('dog_categories')->insert([
-            ['name' => 'a', 'description' => 'a', 'created_at' => new DateTime, 'updated_at' => new DateTime],
-            ['name' => 'b', 'description' => 'b', 'created_at' => new DateTime, 'updated_at' => new DateTime],
+            ['name' => 'c', 'description' => 'a', 'created_at' => new DateTime, 'updated_at' => new DateTime],
+            ['name' => 'd', 'description' => 'b', 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ]);
     }
 }
